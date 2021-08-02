@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/stars.css" />
 
 <div class="row">
-  <div class="col-6">
+  <div class="col-md-6">
     <div id="campgroundCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <% campground.images.forEach((img, i) => { %>
@@ -48,7 +48,7 @@
       <div class="card-body">
         <a
           href="/campgrounds/<%= campground._id %>/edit"
-          class="card-link btn btn-warning"
+          class="card-link btn btn-warning text-white me-2 w-25"
           >Edit</a
         >
         <form
@@ -56,18 +56,17 @@
           action="/campgrounds/<%= campground._id %>?_method=DELETE"
           method="POST"
         >
-          <button class="btn btn-danger">Delete</button>
+          <button class="btn btn-danger w-25">Delete</button>
         </form>
       </div>
       <% } %>
       <div class="card-footer text-muted">
-        2 days ago
-        <a href="/campgrounds">All Campgrounds</a>
+        <a class="btn btn-secondary" href="/campgrounds">All Campgrounds</a>
       </div>
     </div>
   </div>
-  <div class="col-6">
-    <div id="map"></div>
+  <div class="col-md-6">
+    <div id="map" class="mb-4"></div>
 
     <% if(currentUser) { %>
     <h2>Leave a Review</h2>

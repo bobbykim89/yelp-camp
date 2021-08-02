@@ -74,7 +74,7 @@ const sessionConfig = {
   saveUninitialized: true,
   cookie: {
     httpOnly: true,
-    // secure: true,
+    //secure: true, // Comment this out on dev mode
     expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
     maxAge: 1000 * 60 * 60 * 24 * 7,
   },
@@ -160,6 +160,7 @@ app.use((err, req, res, next) => {
 });
 
 const port = process.env.PORT || 3000;
+
 app.listen(port, () => {
   console.log(`Serving on port ${port}`);
 });

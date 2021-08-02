@@ -90,9 +90,11 @@
         <% }) %>
       </div>
       <div class="mb-3">
-        <button class="btn btn-info">Update Campground</button>
+        <button class="btn btn-success me-2">Update Campground</button>
+        <a class="btn btn-danger w-25" href="/campgrounds/<%= campground._id %>"
+          >Back</a
+        >
       </div>
     </form>
-    <a href="/campgrounds/<%= campground._id %>">Back to Campgrounds</a>
   </div>
 </div>
